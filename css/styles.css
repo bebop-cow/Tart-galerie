@@ -13,7 +13,7 @@ h1 {
 .welcome-message {
   text-transform: uppercase;
   font-weight: bold;
-  color: #ad7684;
+  color: #bc8f9a;
   font-size: 3.5vw;
   text-align: left;
   margin-top: 1px;
@@ -46,25 +46,79 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
+
   padding: 0 30px 10px;
-  
-  
+
+
 }
 
 .column {
-  
+
   flex: 33.333%;
   max-width: 33.333%;
   float: left;
-  padding 0 4px ;
+  padding 0 8px;
 }
 
 .column img {
   margin-top: 8px;
   vertical-align: middle;
-  width: 95%;
-  height: 95%;
+  width: 30%;
+  height: 30%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.button {
+  border: 2px solid #710303;
+  background-color: Transparent;
+  border-radius: 5px;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #710303;
+  color: white;
+  transition: 1s ease; /* delays for 1 second */
+  -webkit-transition: all 1s ease; /* for Safari & Chrome */
+
+
+}
+
+#icon {
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  outline: 0;
+}
+
+#icon.active {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .item4 {
