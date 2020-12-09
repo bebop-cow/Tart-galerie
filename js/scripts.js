@@ -23,6 +23,7 @@
        selected.pop(this.id);
      } else if (selected.length == 2) {
        $("#btn").show();
+       $("#" + id).toggleClass("blue"); //Adds the appearance of being selected
      } else {
        $("#" + id).toggleClass("blue"); //Adds the appearance of being selected
        $("#btn").hide(); //keeps the modal button hidden
