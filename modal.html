@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="main" id="orientation">
+      <h2>Orientation</h2>
+      <p>Would you like the orientation to be potrait or landscape?</p>
+      <div class="container">
+        <img id="icon" class="rotate-icon" src="https://www.seekicon.com/free-icon-download/tablet-portrait-outline-icon_1.svg" alt="icon" width="50%" , height="50%">
+        <div class="centered" id="orientation-text">Portait</div>
+      </div>
+
+      <br>
+
+      <a href="#image-order"> <button type="button" class="button"> Next </button> </a>
+
+    </div>
+
+    <div class="main" id="image-order">
+      <h2>Image order</h2>
+
+      <div id="box-container" class="container">
+
+
+        <img id="image2" class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square" style="width:50%">
+        <img id="image3" class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square" style="width:50%">
+        <br>
+
+      </div>
+      <a href="#download"><button type="button" class="button" style="margin-bottom: 10%"> Next </button> </a>
+    </div>
+
+    <div class="main" id="download">
+      <h2>Section 3</h2>
+
+      <div class="container">
+      
+        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;"></canvas>
+
+        <a href="image.jpg" download><button type="button" class="button"> Download </button> </a>
+
+      </div>
+    </div>
+
+
+
+  </body>
+
+</html>
