@@ -6,8 +6,10 @@ h1 {
   text-align: center;
   text-transform: titlecase;
   color: #710303 !important;
+}
 
-
+img {
+  display: none;
 }
 
 .welcome-message {
@@ -30,18 +32,6 @@ h1 {
   opacity: 0.7;
 }
 
-.item1 {
-  background: LightSkyBlue;
-  opacity: .5;
-  width: 100%;
-}
-
-.item2 {
-  background: LightSalmon;
-  grid-area: advert;
-}
-
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -57,7 +47,7 @@ h1 {
   flex: 33.333%;
   max-width: 33.333%;
   float: left;
-  padding 0 8px;
+  padding: 0 8px;
 }
 
 .column img {
@@ -65,6 +55,7 @@ h1 {
   vertical-align: middle;
   width: 50%;
   height: 50%;
+  display: block;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -83,32 +74,84 @@ h1 {
   }
 }
 
-.blue{
-border: 3px solid white;
-opacity: 0.8;
+.blue {
+  border: 3px solid white;
+  opacity: 0.8;
+}
+
+/* Modal Styles */
+
+#orientation {
+  /*  height: 600px; */
 }
 
 
-.button {
-  margin: 3% 3%;
-  border: 2px solid #710303;
-  background-color: Transparent;
-  border-radius: 5px;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #710303;
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
   color: white;
-  transition: 1s ease; /* delays for 1 second */
-  -webkit-transition: all 1s ease; /* for Safari & Chrome */
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#image-order {
+  /*  height: 600px; */
+}
+
+#box-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 500px;
+  flex-direction: column;
+}
+
+#download {
+  border-radius: 25px;
+  height: 600px;
+  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  margin: 10px;
+}
 
 
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  padding: 15px;
+}
+
+#myTable {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#myTable-Potrait {
+  display: none;
+}
+
+#myTable-Landscape {
+  display: none;
 }
 
 #icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  cursor: pointer;
+
   -webkit-transition-duration: 1s;
   -moz-transition-duration: 1s;
   -o-transition-duration: 1s;
@@ -128,7 +171,25 @@ opacity: 0.8;
   transform: rotate(90deg);
 }
 
-.item4 {
-  background: lightpink;
-  grid-area: footer;
+.button {
+  margin: 3% 3%;
+  border: 2px solid #710303;
+  background-color: Transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: #710303;
+  color: white;
+  transition: 1s ease;
+
+  /* delays for 1 second */
+  -webkit-transition: all 1s ease;
+  /* for Safari & Chrome */
+
 }
