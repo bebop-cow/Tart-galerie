@@ -81,115 +81,138 @@ img {
 
 /* Modal Styles */
 
-#orientation {
-  /*  height: 600px; */
-}
+ .modal-content {
+   background-color: #bc8f9a !important;
+ }
+
+ #orientation {
+   height: 500px;
+
+ }
+
+ h4 {
+   text-align: center;
+   margin-top: 10%;
+   text-transform: uppercase;
+   font-weight: bold !important;
+   color: #710303 !important;
+ }
 
 
-/* Container holding the image and the text */
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
+ /* Container holding the image and the text */
+ .container {
+   position: relative;
+   text-align: center;
+   color: #e1ccd1;
+ }
 
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+ /* Centered text */
+ .centered {
+   text-transform: uppercase;
+   font-weight: bold;
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
 
-#image-order {
-  /*  height: 600px; */
-}
+ #image-order {
+   height: 600px;
+   background-color: yellow;
+ }
 
-#box-container {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  height: 500px;
-  flex-direction: column;
-}
+ #box-container {
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   height: 500px;
+   flex-direction: column;
+ }
 
-#download {
-  border-radius: 25px;
-  height: 600px;
-  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
-  margin: 10px;
-}
+ #download {
+   margin-top: 30px;
+   height: 400px;
+   margin-left: 20px;
+   margin-right: 20px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+   border-radius: 25px;
+ }
 
+ img {
+   display: none;
+ }
 
+ table {
+   margin: 0 auto;
+ }
 
-table {
-  margin: 0 auto;
-}
+ td {
+   padding: 15px;
+ }
 
-td {
-  padding: 15px;
-}
+ #myTable {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, 0%);
+ }
 
-#myTable {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
+ #myTable-Potrait {
+   display: none;
+ }
 
-#myTable-Potrait {
-  display: none;
-}
+ #myTable-Landscape {
+   display: none;
+ }
 
-#myTable-Landscape {
-  display: none;
-}
+ #icon {
+   display: block;
+   margin-top: 10%;
+   margin-left: auto;
+   margin-right: auto;
+   width: 40%;
+   cursor: pointer;
 
-#icon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  cursor: pointer;
+   -webkit-transition-duration: 1s;
+   -moz-transition-duration: 1s;
+   -o-transition-duration: 1s;
+   transition-duration: 1s;
+   -webkit-transition-property: -webkit-transform;
+   -moz-transition-property: -moz-transform;
+   -o-transition-property: -o-transform;
+   transition-property: transform;
+   outline: 0;
+ }
 
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  outline: 0;
-}
+ #icon.active {
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   transform: rotate(90deg);
+ }
 
-#icon.active {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
+ .button {
+   margin: 3% 3%;
+   border: 2px solid #710303;
+   background-color: Transparent !important;
+   color: black;
+   border-radius: 5px;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   float: right;
+   margin-right: 10px;
+ }
 
-.button {
-  margin: 3% 3%;
-  border: 2px solid #710303;
-  background-color: Transparent;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  float: right;
-  margin-right: 10px;
-}
+ .button:hover {
+   background-color: #710303;
+   color: white;
+   transition: 1s ease;
+   /* delays for 1 second */
+   -webkit-transition: all 1s ease;
+   /* for Safari & Chrome */
 
-.button:hover {
-  background-color: #710303;
-  color: white;
-  transition: 1s ease;
+ }
 
-  /* delays for 1 second */
-  -webkit-transition: all 1s ease;
-  /* for Safari & Chrome */
-
-}
