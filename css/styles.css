@@ -81,7 +81,7 @@ img {
 
 /* Modal Styles */
 
- .modal-content {
+.modal-content {
    background-color: #bc8f9a !important;
  }
 
@@ -90,9 +90,9 @@ img {
 
  }
 
- h4 {
+ .h4-modal {
    text-align: center;
-   margin-top: 10%;
+   margin-top: 2%;
    text-transform: uppercase;
    font-weight: bold !important;
    color: #710303 !important;
@@ -215,4 +215,18 @@ img {
    /* for Safari & Chrome */
 
  }
+ 
+  .download-btn {
+  background-color: Transparent !important;
+  border: 2px solid #710303;
+  border-radius: 25px;
+  margin: auto;
+  width: 50%;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transform: translateX(50%);
+  
 
+ }
