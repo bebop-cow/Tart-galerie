@@ -79,169 +79,187 @@ img {
 .blue {
   border: 3px solid white;
   opacity: 0.8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Modal Styles */
 
 .modal-content {
-   background-color: #bc8f9a !important;
- }
+  background-color: #bc8f9a !important;
+}
 
- #orientation {
-   height: 500px;
-   text-align: center;
+#orientation {
+  height: 500px;
+  text-align: center;
 
- }
-
-
- .h4-modal {
-   text-align: center;
-   margin-top: 2%;
-   text-transform: uppercase;
-   font-weight: bold !important;
-   color: #e1ccd1 !important;
- }
-
- #icon {
-   display: block;
-   margin-top: 10%;
-   margin-left: auto;
-   margin-right: auto;
-   width: 40%;
-   cursor: pointer;
-
-   -webkit-transition-duration: 1s;
-   -moz-transition-duration: 1s;
-   -o-transition-duration: 1s;
-   transition-duration: 1s;
-   -webkit-transition-property: -webkit-transform;
-   -moz-transition-property: -moz-transform;
-   -o-transition-property: -o-transform;
-   transition-property: transform;
-   outline: 0;
- }
-
- #icon.active {
-   -webkit-transform: rotate(90deg);
-   -moz-transform: rotate(90deg);
-   -ms-transform: rotate(90deg);
-   -o-transform: rotate(90deg);
-   transform: rotate(90deg);
- }
-
- .button {
-   margin: 3% 3%;
-   border: 2px solid #710303;
-   background-color: Transparent !important;
-   color: black;
-   border-radius: 5px;
-   padding: 10px 20px;
-   font-size: 16px;
-   cursor: pointer;
-   float: right;
-   margin-right: 10px;
- }
-
- .button:hover {
-   background-color: #710303 !important;
-   color: white;
-   transition: 1s ease;
-   /* delays for 1 second */
-   -webkit-transition: all 1s ease;
-   /* for Safari & Chrome */
-
- }
+}
 
 
+.h4-modal {
+  text-align: center;
+  margin-top: 2%;
+  text-transform: uppercase;
+  font-weight: bold !important;
+  color: #e1ccd1 !important;
+}
 
- /* Centered text */
- .centered {
-   text-transform: uppercase;
-   font-weight: bold;
-   text-align: center;
-   color: #c69fa8;
-   
- }
+#icon {
+  display: block;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  cursor: pointer;
 
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  outline: 0;
+}
 
- #box-container {
-   display: flex;
-   align-items: center;
-   justify-items: center;
-   height: 500px;
-   flex-direction: column;
- }
+#icon.active {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 
- /* download section */
- 
- #download {
-   display: none;
- }
+.button {
+  margin: 3% 3%;
+  border: 2px solid #710303;
+  background-color: Transparent !important;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+}
 
- table {
-   margin: 0 auto;
+.button:hover {
+  background-color: #710303 !important;
+  color: white;
+  transition: 1s ease;
+  /* delays for 1 second */
+  -webkit-transition: all 1s ease;
+  /* for Safari & Chrome */
 
- }
-
- td {
-   padding: 15px;
-   width: 200px;
-
- }
-
- #myTable {
-   margin-top: 30px;
-   height: 600px;
-   margin-left: 20px;
-   margin-right: 20px;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
-   border-radius: 25px;
-   position: relative;
-   
- }
-
- #myTable-Potrait {
-   display: none;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-      
-
- }
-
- #myTable-Landscape {
-   display: none;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-
-   transform: translate(-50%, -50%);
- }
+}
 
 
 
- .download-btn {
-   background-color: Transparent !important;
-   border: 2px solid #710303;
-   border-radius: 25px;
-   margin: auto;
-   margin-top: 20px;
-   width: 50%;
-   color: #e1ccd1;
-   padding: 10px 20px;
-   font-size: 16px;
-   cursor: pointer;
-   transform: translateX(50%);
- }
+/* Centered text */
+.centered {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: #c69fa8;
 
- .download-btn:hover {
-   background-color: #710303 !important;
-   color: white;
-   transition: 1s ease;
-   /* delays for 1 second */
-   -webkit-transition: all 1s ease;
-   /* for Safari & Chrome */
+}
 
- }
+
+#box-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 500px;
+  flex-direction: column;
+}
+
+/* download section */
+
+#download {
+  display: none;
+}
+
+table {
+  margin: 0 auto;
+
+}
+
+td {
+  padding: 15px;
+  width: 200px;
+
+}
+
+#myTable {
+  margin-top: 30px;
+  height: 600px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  border-radius: 25px;
+  position: relative;
+
+}
+
+#myTable-Potrait {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+#myTable-Landscape {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+
+.download-btn {
+  background-color: Transparent !important;
+  border: 2px solid #710303;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 20px;
+  width: 50%;
+  color: #e1ccd1;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transform: translateX(50%);
+}
+
+.download-btn:hover {
+  background-color: #710303 !important;
+  color: white;
+  transition: 1s ease;
+  /* delays for 1 second */
+  -webkit-transition: all 1s ease;
+  /* for Safari & Chrome */
+
+}
+
+.close-button {
+  background-color: #710303 !important;
+  color: white !important;
+  border: transparent !important;
+}
+
+.close-button:hover {
+
+  background-color: #bc8f9a !important;
+  color: #710303 !important;
+  transition: 1s ease !important;
+  /* delays for 1 second */
+  -webkit-transition: all 1s ease;
+  /* for Safari & Chrome */
+
+}
