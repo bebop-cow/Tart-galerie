@@ -5,157 +5,95 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Wallpaper</title>
+    <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="Tyrone" content="SitePoint">
+    <meta name="author" content="SitePoint">
 
     <!--minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.0">
-
-    <!--  JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!--minified Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <!--HTML2Canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js">
     </script>
 
-    <!--Js + JQuery -->
-    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
 
   </head>
 
   <body onload="draw();">
-    <main>
-      <div class="container-fluid">
-        <h1 class="display-1">Tart-Wallpaper</h1>
-
-        <hr>
-
-        <h4 class="welcome-message">Hello </h4>
-        <h4 class="welcome-message">Welcome to my Art Store </h4>
-        <h6 class="welcome-message " style="font-size:2vw">All these paintings have been done on square canvases so they can be combined to make a wallpaper in both, potrait and landscape orientations. </h6>
-        <h6 class="welcome-message" style="font-size:2vw"> Go ahead and pick two. </h6>
-
-        <blockquote style="font-size: 1.5vw; border-left: none" class="quote blockquote text-right">
-          <p class="mb-0"> If Trump can raise $200 million for his false post-election claims, surely I can raise a decent amount with my paintings.</p>
-          <footer class="quote-footer blockquote-footer"><cite title="Source Title">Me</cite>, thinking about this website</footer>
-        </blockquote>
 
 
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Wallpaper Maker</h4>
       </div>
+      <div class="modal-body">
+        <!-- Orientation section -->
+        <div class="main" id="orientation">
+          <h4 class="h4-modal">Would you like the orientation to be potrait or landscape?</h4>
 
-      <div class="row">
-        <div class="column">
-
-          <img id="image1" class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square">
-
-          <img id="image2" class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square">
-        </div>
-        <!--Column-->
-        <div class="column">
-
-          <img id="image3" class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square">
-
-          <img id="image4" class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square">
-        </div>
-        <!--Column-->
-        <div class="column">
-
-          <img id="image5" class="image" src="https://images.unsplash.com/photo-1600354587397-681c16c184bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNxdWFyZXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Square">
-
-          <img id="image6" class="image" src="https://images.unsplash.com/photo-1600354587397-681c16c184bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNxdWFyZXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Square">
-        </div>
-        <!--Column-->
-      </div>
-
-
-      <!--Row-->
-
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="button" id="btn" data-toggle="modal" data-target="#myModal" style="display: none">Make Wallpaper</button>
-
-
-      <!-- Modal -->
-      <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Wallpaper Maker</h4>
-            </div>
-
-            <div class="modal-body">
-              <!-- Orientation section -->
-              <div class="main" id="orientation">
-                <h4 class="h4-modal">Would you like the orientation to be potrait or landscape?</h4>
-
-
-                <img id="icon" class="rotate-icon" src="https://www.seekicon.com/free-icon-download/tablet-portrait-outline-icon_1.svg" alt="icon">
-                <div class="centered" id="orientation-text">Portait</div>
-
-
-                <br>
-
-                <a href="#download"> <button type="button" class="button"> Next </button> </a>
-
-              </div>
-
-
-              <!-- Download section -->
-              <div class="main" id="download">
-
-
-                <div class="container">
-                  <div id="myTable" class="container">
-
-                    <table id="myTable-Landscape">
-                      <tr>
-                        <td> <img class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square" style="width:200px;"> </td>
-
-                        <td> <img class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square" style="width:200px; "> </td>
-                      </tr>
-
-                    </table>
-
-                    <table id="myTable-Potrait">
-                      <tr>
-                        <td> <img class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square" style="width:200px;"> </td>
-                      </tr>
-                      <tr>
-                        <td> <img class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square" style="width:200px; "> </td>
-                      </tr>
-
-                    </table>
-
-                  </div>
-
-                  <img id="frame" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/242/2ce0b2ba9d8aa1d43a59694c70de9148/Canvas_picture_frame.png" width="132" height="150">
-                </div>
-
-              </div>
-            </div>
-            <a id="download-button" style="background color: transparent" download="Image.jpg" href="" onclick="download_img(this);"><button class="download-btn"> Download</button></a>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+          <div class="container">
+            <img id="icon" class="rotate-icon" src="https://www.seekicon.com/free-icon-download/tablet-portrait-outline-icon_1.svg" alt="icon" width="50%" , height="50%">
+            <div class="centered" id="orientation-text">Portait</div>
           </div>
 
+          <br>
+
+          <a href="#download"> <button type="button" class="button"> Next </button> </a>
+
+        </div>
+
+
+        <!-- Download section -->
+        <div class="main" id="download">
+
+          <div id=myTable style= "text-align: center;">
+
+            <table id="myTable-Landscape">
+              <tr>
+                <td> <img class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square" style="width:200px;"> </td>
+
+                <td> <img class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square" style="width:200px; "> </td>
+              </tr>
+
+            </table>
+
+            <table id="myTable-Potrait">
+              <tr>
+                <td> <img class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square" style="width:200px;"> </td>
+              </tr>
+              <tr>
+                <td> <img class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square" style="width:200px; "> </td>
+              </tr>
+
+            </table>
+
+          </div>
+
+          <img id="frame" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/242/2ce0b2ba9d8aa1d43a59694c70de9148/Canvas_picture_frame.png" width="132" height="150">
+
+
         </div>
       </div>
+      <a id="download-button"> <button class="download-btn"> Download</button></a>
+
+      <h3>Preview :</h3>
+
+      <div id="previewImage"></div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
 
 
-    </main>
 
   </body>
+
 
 </html>
