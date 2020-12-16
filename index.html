@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 
     <title>Wallpaper</title>
-    <meta name="description" content="The HTML5 Herald">
+    <meta name="description" content="Tart-Wallpaper">
     <meta name="Tyrone" content="SitePoint">
 
     <!--minified Bootstrap CSS -->
@@ -24,7 +24,7 @@
     <!--HTML2Canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js">
     </script>
-    
+
     <!-- Smooth Scroll -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js" integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ==" crossorigin="anonymous"></script>
 
@@ -34,11 +34,11 @@
 
   </head>
 
-  <body onload="draw();">
+  <body >
     <main>
       <div class="container-fluid">
-        <p class= "h1">
-        Tart-Wallpaper
+        <p class="h1">
+          Tart-Wallpaper
         </p>
 
         <hr>
@@ -55,32 +55,32 @@
 
 
       </div>
-       <div class="container">
-      <div class="row">
-        <div class="col-xs-4 col-md-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 col-md-6">
 
-          <img id="image1" class="img-responsive image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square"></div>
+            <img id="image1" class="img-responsive image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square"></div>
 
-        <div class="col-xs-4 col-md-6">
+          <div class="col-xs-4 col-md-6">
 
-          <img id="image2" class="img-responsive image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square"></div>
-        <!--Column-->
-        <div class="col-xs-4 col-md-6">
-          <img id="image3" class="img-responsive image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square"></div>
+            <img id="image2" class="img-responsive image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square"></div>
+          <!--Column-->
+          <div class="col-xs-4 col-md-6">
+            <img id="image3" class="img-responsive image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square"></div>
 
-        <div class="col-xs-4 col-md-6">
-          <img id="image4" class="img-responsive image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square"></div>
-        <!--Column-->
-        <div class="col-xs-4 col-md-6">
-          <img id="image5" class="img-responsive image" src="https://images.unsplash.com/photo-1600354587397-681c16c184bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNxdWFyZXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Square"></div>
+          <div class="col-xs-4 col-md-6">
+            <img id="image4" class="img-responsive image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square"></div>
+          <!--Column-->
+          <div class="col-xs-4 col-md-6">
+            <img id="image5" class="img-responsive image" src="https://images.unsplash.com/photo-1600354587397-681c16c184bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNxdWFyZXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Square"></div>
 
-        <div class="col-xs-4 col-md-6">
-          <img id="image6" class="img-responsive image" src="https://images.unsplash.com/photo-1600354587397-681c16c184bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNxdWFyZXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Square"></div>
+          <div class="col-xs-4 col-md-6">
+            <img id="image6" class="img-responsive image" src="https://images.unsplash.com/photo-1600354587397-681c16c184bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHNxdWFyZXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Square"></div>
+
+        </div>
+        <!--Row-->
 
       </div>
-      <!--Row-->
-
-    </div>
 
 
       <!-- Trigger the modal with a button -->
@@ -95,13 +95,14 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Wallpaper Maker</h4>
+              <h4 class="modal-title h1">Wallpaper Maker</h4>
             </div>
 
             <div class="modal-body">
               <!-- Orientation section -->
               <div class="main" id="orientation">
                 <h4 class="h4-modal">Would you like the orientation to be potrait or landscape?</h4>
+
 
 
                 <img id="icon" class="rotate-icon" src="icon.svg" alt="icon">
@@ -117,19 +118,19 @@
 
                   <table id="myTable-Landscape">
                     <tr>
-                      <td> <img class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square" style="width:200px;"> </td>
+                      <td class = "td1"></td>
 
-                      <td> <img class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square" style="width:200px; "> </td>
+                      <td class = "td2"></td>
                     </tr>
 
                   </table>
 
                   <table id="myTable-Potrait">
                     <tr>
-                      <td> <img class="image" src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1422&q=80" alt="Square" style="width:200px;"> </td>
+                      <td class = "td1"></td>
                     </tr>
                     <tr>
-                      <td> <img class="image" src="https://images.unsplash.com/photo-1444021465936-c6ca81d39b84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="Square" style="width:200px; "> </td>
+                      <td class = "td2"></td>
                     </tr>
 
                   </table>
@@ -137,13 +138,13 @@
                 </div>
 
                 <img id="frame" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/242/2ce0b2ba9d8aa1d43a59694c70de9148/Canvas_picture_frame.png" width="132" height="150">
-                
-                 <a id="download-button" style="background color: transparent" download="Image.jpg" href="" onclick="download_img(this);"><button class="download-btn"> Download</button></a>
+
+                <a id="download-button" style="background color: transparent" download="Image.jpg" href="" onclick="download_img(this);"><button class="download-btn"> Download</button></a>
 
               </div>
-              
+
             </div>
-           
+
 
             <div class="modal-footer">
               <button type="button" class="btn btn-default close-button" data-dismiss="modal">Close</button>
