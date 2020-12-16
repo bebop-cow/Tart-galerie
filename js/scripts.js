@@ -1,6 +1,9 @@
+//Global Variable
+let selected = [];
+
 //Image selection
 $(document).ready(function() {
-  let selected = [];
+  
   $('.image').click(function() {
     var id = ($(this).attr('id')); //gets the id of the image that was clicked and passes it to the variable id
 
@@ -27,7 +30,7 @@ $(document).ready(function() {
 
 //Modal 
 
-//Orientation Filter
+//Orientation 
  $(document).ready(function() {
    $('#icon').on('click', function() {
      $('#icon').toggleClass('active');
@@ -38,14 +41,12 @@ $(document).ready(function() {
        text == "Potrait" ? "Landscape" : "Potrait");
 
      if (text !== "Landscape") {
-       $("#box-container").css("flex-direction", "row");
        $("#myTable-Landscape").css("display", "inline");
        $("#myTable").css({"height":"400px", "width":"","margin-left": "","margin-right": "" });
        $("#myTable-Potrait").css("display", "none");
        
 
      } else {
-       $("#box-container").css("flex-direction", "column");
        $("#myTable-Potrait").css("display", "inline");
        $("#myTable").css({"height":"600px", "width":"300px","margin-left": "auto","margin-right": "auto" });
        
@@ -54,6 +55,19 @@ $(document).ready(function() {
      }
    });
  });
+
+
+
+  $('#btn').click(function() {
+    
+    let firstImageSelected = $("#" + selected[0]).attr('src');
+    let secondImageSelected = $("#" + selected[1]).attr('src');
+    $('.td1').html('<img id="image2" class="image" src='+ firstImageSelected + 'alt="Square" style>');
+    $('.td2').html('<img  class="image" src='+ secondImageSelected + 'alt="Square">');
+    draw();
+
+  })
+
 
 //Draw Function
 function draw() {
@@ -73,8 +87,10 @@ function draw() {
 
       // Create canvas element
       var canvas = document.createElement('canvas');
-      canvas.setAttribute('width', 132);
-      canvas.setAttribute('height', 150);
+     /*  canvas.setAttribute('width', 132);
+      canvas.setAttribute('height', 150); */
+       canvas.setAttribute('width', 160);
+       canvas.setAttribute('height', 160);
 
       // Insert before the image
       images[i].parentNode.insertBefore(canvas, images[i]);
@@ -82,10 +98,10 @@ function draw() {
       var ctx = canvas.getContext('2d');
 
       // Draw image to canvas
-      ctx.drawImage(images[i], 21, 20, 104, 104);
+      ctx.drawImage(images[i], 21, 20, 110, 110);
 
       // Add frame
-      ctx.drawImage(document.getElementById('frame'), 0, 0);
+      ctx.drawImage(document.getElementById('frame'), 0, 0, 150, 150);
     }
   }
 }
