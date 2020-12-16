@@ -3,7 +3,7 @@ let selected = [];
 
 //Image selection
 $(document).ready(function() {
-  
+
   $('.image').click(function() {
     var id = ($(this).attr('id')); //gets the id of the image that was clicked and passes it to the variable id
 
@@ -19,11 +19,22 @@ $(document).ready(function() {
       selected.pop(this.id);
     } else if (selected.length == 2) {
       $("#btn").show();
-       $("#" + id).toggleClass("blue");
+      $("#" + id).toggleClass("blue");
     } else {
       $("#" + id).toggleClass("blue"); //Adds the appearance of being selected
       $("#btn").hide(); //keeps the modal button hidden
     }
+
+    $('#btn').click(function() {
+
+      let firstImageSelected = $("#" + selected[0]).attr('src');
+      let secondImageSelected = $("#" + selected[1]).attr('src');
+
+      $('.td1').html('<img  class="image" src=' + firstImageSelected + 'alt="Square">');
+      $('.td2').html('<img  class="image" src=' + secondImageSelected + 'alt="Square">');
+      draw();
+
+    });
 
   });
 });
@@ -31,45 +42,44 @@ $(document).ready(function() {
 //Modal 
 
 //Orientation 
- $(document).ready(function() {
-   $('#icon').on('click', function() {
-     $('#icon').toggleClass('active');
-     $('#download').css("display","block")
+$(document).ready(function() {
+  $('#icon').on('click', function() {
+    $('#icon').toggleClass('active');
+    $('#download').css("display", "block")
 
-     var text = $('#orientation-text').text();
-     $("#orientation-text").text(
-       text == "Potrait" ? "Landscape" : "Potrait");
+    var text = $('#orientation-text').text();
+    $("#orientation-text").text(
+      text == "Potrait" ? "Landscape" : "Potrait");
 
-     if (text !== "Landscape") {
-       $("#myTable-Landscape").css("display", "inline");
-       $("#myTable").css({"height":"400px", "width":"","margin-left": "","margin-right": "" });
-       $("#myTable-Potrait").css("display", "none");
-       
-
-     } else {
-       $("#myTable-Potrait").css("display", "inline");
-       $("#myTable").css({"height":"600px", "width":"300px","margin-left": "auto","margin-right": "auto" });
-       
-       $("#myTable-Landscape").css("display", "none");
-
-     }
-   });
- });
+    if (text !== "Landscape") {
+      $("#myTable-Landscape").css("display", "inline");
+      $("#myTable").css({
+        "height": "400px",
+        "transition": "width 3s, height 3s",
+        "width": "",
+        "margin-left": "",
+        "margin-right": ""
+      });
+      $("#myTable-Potrait").css("display", "none");
 
 
+    } else {
+      $("#myTable-Potrait").css("display", "inline");
+      $("#myTable").css({
+        "height": "600px",
+        "width": "300px",
+        "transition": "width 3s, height 3s",
+        "margin-left": "auto",
+        "margin-right": "auto"
+      });
 
-(document).ready(function() {
-  $('#btn').click(function() {
+      $("#myTable-Landscape").css("display", "none");
 
-    let firstImageSelected = $("#" + selected[0]).attr('src');
-    let secondImageSelected = $("#" + selected[1]).attr('src');
-
-    $('.td1').html('<img  class="image" src=' + firstImageSelected + 'alt="Square">');
-    $('.td2').html('<img  class="image" src=' + secondImageSelected + 'alt="Square">');
-    draw();
-
+    }
   });
 });
+
+
 
 
 //Draw Function
@@ -91,10 +101,10 @@ function draw() {
 
       // Create canvas element
       var canvas = document.createElement('canvas');
-     /*  canvas.setAttribute('width', 132);
-      canvas.setAttribute('height', 150); */
-       canvas.setAttribute('width', 160);
-       canvas.setAttribute('height', 160);
+      /*  canvas.setAttribute('width', 132);
+       canvas.setAttribute('height', 150); */
+      canvas.setAttribute('width', 160);
+      canvas.setAttribute('height', 160);
 
       // Insert before the image
       images[i].parentNode.insertBefore(canvas, images[i]);
@@ -110,6 +120,3 @@ function draw() {
   }
   console.log("draw has finished");
 }
-
-
-
