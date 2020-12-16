@@ -84,7 +84,7 @@ img {
 
 
 }
-
+/* selected  style */
 .blue {
   border: 3px solid white;
   opacity: 0.8;
@@ -173,15 +173,6 @@ img {
   text-align: center;
   color: #c69fa8;
 
-}
-
-
-#box-container {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  height: 500px;
-  flex-direction: column;
 }
 
 /* download section */
