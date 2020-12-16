@@ -87,7 +87,7 @@ function draw() {
 
   var mytable = document.getElementById('myTable');
   var images = mytable.getElementsByTagName('img');
-  console.log("draw has been called");
+
 
 
   // Loop through all images
@@ -118,5 +118,5 @@ function draw() {
       ctx.drawImage(document.getElementById('frame'), 0, 0, 150, 150);
     }
   }
-  console.log("draw has finished");
+  
 }
