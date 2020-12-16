@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300&display=swap');
+
+
+
+
 body {
   background-color: #e1ccd1 !important;
 }
 
-h1 {
+.h1 {
+  font-family: 'Barlow Semi Condensed', sans-serif !important;
+  font-size: 1.125rem;
+  font-weight: 300 !important;
+  line-height: 1.5;
   text-align: center;
-  text-transform: titlecase;
+  
   color: #710303 !important;
 }
 
@@ -97,10 +106,12 @@ img {
 
 .h4-modal {
   text-align: center;
+  font-family: 'Barlow Semi Condensed', sans-serif !important;
+  font-size: 25px;
   margin-top: 2%;
   text-transform: uppercase;
-  font-weight: bold !important;
   color: #e1ccd1 !important;
+  font-weight: 200 !important;
 }
 
 #icon {
@@ -131,20 +142,20 @@ img {
 }
 
 .button {
-  margin: 3% 3%;
-  border: 2px solid #710303;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #bc8f9a;
   background-color: Transparent !important;
-  color: black;
-  border-radius: 5px;
-  padding: 10px 20px;
+  color: #710303;
+  border-radius: 10px;
+  padding: 8px 18px;
   font-size: 16px;
   cursor: pointer;
-  float: right;
-  margin-right: 10px;
-}
+  }
 
 .button:hover {
   background-color: #710303 !important;
+  border: 2px solid #710303;
   color: white;
   transition: 1s ease;
   /* delays for 1 second */
@@ -225,13 +236,16 @@ td {
 
 .download-btn {
   background-color: Transparent !important;
-  border: 2px solid #710303;
+  border: 1px solid #c69fa8 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: transparent;
   border-radius: 25px;
   margin: auto;
   margin-top: 20px;
   width: 50%;
-  color: #e1ccd1;
-  padding: 10px 20px;
+  color: #c69fa8;
+  padding: 5px 10px;
   font-size: 16px;
   cursor: pointer;
   transform: translateX(50%);
