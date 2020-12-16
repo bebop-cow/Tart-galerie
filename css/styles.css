@@ -9,7 +9,7 @@ body {
 
 .h1 {
   font-family: 'Barlow Semi Condensed', sans-serif !important;
-  font-size: 1.125rem;
+  font-size: 3.4vw;
   font-weight: 300 !important;
   line-height: 1.5;
   text-align: center;
@@ -28,7 +28,7 @@ img {
   text-transform: uppercase;
   font-weight: bold;
   color: #bc8f9a;
-  font-size: 3.5vw;
+  font-size: 3vw;
   text-align: left;
   margin-top: 1px;
   padding-left: 3%;
@@ -69,7 +69,7 @@ img {
 .h4-modal {
   text-align: center;
   font-family: 'Barlow Semi Condensed', sans-serif !important;
-  font-size: 25px;
+  font-size: 3vw;
   margin-top: 2%;
   text-transform: uppercase;
   color: #e1ccd1 !important;
