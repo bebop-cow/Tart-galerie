@@ -120,3 +120,17 @@ function draw() {
   }
   
 }
+
+var btn = document.getElementById('download-button');
+
+btn.onclick = function() {
+html2canvas(document.querySelector("#myTable"),{
+            allowTaint:true,
+            useCORS	:true,
+            foreignObjectRendering: true,
+            useCors: true
+        }).then(canvas => {
+    $("#preview").append(canvas)
+});
+
+}
