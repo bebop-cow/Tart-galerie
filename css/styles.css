@@ -9,11 +9,11 @@ body {
 
 .h1 {
   font-family: 'Barlow Semi Condensed', sans-serif !important;
-  font-size: 3.4vw;
+  font-size: 3.5vw;
   font-weight: 300 !important;
   line-height: 1.5;
   text-align: center;
-  
+
   color: #710303 !important;
 }
 
@@ -21,9 +21,10 @@ img {
   display: none;
 }
 
-.image{
+.image {
   margin-top: 20px !important;
 }
+
 .welcome-message {
   text-transform: uppercase;
   font-weight: bold;
@@ -57,7 +58,10 @@ img {
 
 .modal-content {
   background-color: #bc8f9a !important;
+  overflow-x: scroll;
 }
+
+
 
 #orientation {
   height: 500px;
@@ -68,7 +72,8 @@ img {
 
 .h4-modal {
   text-align: center;
-  font-family: 'Barlow Semi Condensed', sans-serif !important;
+  /* font-family: 'Barlow Semi Condensed', sans-serif !important; */
+  text-transform: uppercase;
   font-size: 3vw;
   margin-top: 2%;
   text-transform: uppercase;
@@ -115,7 +120,7 @@ img {
   cursor: pointer;
   margin-top: 20px;
   width: 50%;
-  }
+}
 
 .button:hover {
   background-color: #710303 !important;
@@ -166,6 +171,7 @@ td {
   border-radius: 25px;
   position: relative;
 
+
 }
 
 #myTable-Potrait {
@@ -214,6 +220,10 @@ td {
   -webkit-transition: all 1s ease;
   /* for Safari & Chrome */
 
+}
+
+#preview img{
+  display: inline !important;
 }
 
 .close-button {
