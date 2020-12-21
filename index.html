@@ -22,7 +22,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!--HTML2Canvas -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js">
+    </script>
+
 
     <!--Js + JQuery -->
     <script src="js/scripts.js"></script>
@@ -30,7 +32,7 @@
 
   </head>
 
-  <body >
+  <body>
     <main>
       <div class="container-fluid">
         <p class="h1">
@@ -51,20 +53,22 @@
 
 
       </div>
-       <div class="container">
+      <div class="container">
         <div class="row">
           <div class="col-xs-6 col-md-4">
+
             <img id="image1" class="img-responsive image" src="1.jpg" alt="Square"></div>
 
           <div class="col-xs-6 col-md-4">
+
             <img id="image2" class="img-responsive image" src="2.jpeg" alt="Square"></div>
-       
+          <!--Column-->
           <div class="col-xs-6 col-md-4">
             <img id="image3" class="img-responsive image" src="3.jpeg" alt="Square"></div>
 
           <div class="col-xs-6 col-md-4">
             <img id="image4" class="img-responsive image" src="4.jpeg" alt="Square"></div>
-       
+          <!--Column-->
           <div class="col-xs-6 col-md-4">
             <img id="image5" class="img-responsive image" src="5.jpeg" alt="Square"></div>
 
@@ -74,83 +78,76 @@
         </div>
         <!--Row-->
 
+        <a id="MakeWallpaper-button" style="display: none"><button class="download-btn"> Make Wallpaper</button></a>
+
+      </div>
+
+      <!-- Orientation section -->
+
+      <div class="main" id="orientation">
+
+        <img id="icon" class="rotate-icon" src="icon.svg" alt="icon">
+        <div class="centered" id="orientation-text">Potrait</div>
+        <br>
+
       </div>
 
 
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="button" id="btn" data-toggle="modal" data-target="#myModal" style="display: none">Make Wallpaper</button>
+
+      <!-- Download section -->
+      <div class="main" id="download">
+
+        <div id="myTable" style="text-align: center">
+
+          <table id="myTable-Landscape">
+            <tr>
+              <td class="td1" style="display: none">
+                <div style="position: relative; left: 0; top: 0;">
+                  <img class="img-responsive image topImage-Landscape td1-Image" src='' alt="Square">
+                  <img  class="frame-Landscape" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/242/2ce0b2ba9d8aa1d43a59694c70de9148/Canvas_picture_frame.png"></div>
+              </td>
+
+              <td class="td2" style="display: none">
+                <div style="position: relative; left: 0; top: 0;">
+                  <img  class="img-responsive image topImage-Landscape td2-Image" src='' alt="Square">
+                  <img  class="frame-Landscape" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/242/2ce0b2ba9d8aa1d43a59694c70de9148/Canvas_picture_frame.png"></div>
+              </td>
+            </tr>
+
+          </table>
+
+          <table id="myTable-Potrait">
+            <tr>
+              <td class="td1" style="display: none">
+                <div style="position: relative; left: 0; top: 0;">
+                  <img  class="img-responsive image topImage-Potrait td1-Image" src=' + firstImageSelected + ' alt="Square">
+                  <img   class="frame-Potrait" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/242/2ce0b2ba9d8aa1d43a59694c70de9148/Canvas_picture_frame.png"></div>
+              </td>
+              </tr>
+
+              <tr>
+              <td class="td2" style="display: none">
+                <div style="position: relative; left: 0; top: 0;">
+                  <img  class="img-responsive image topImage-Potrait td2-Image" src=' + firstImageSelected + ' alt="Square">
+                  <img  class="frame-Potrait" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/242/2ce0b2ba9d8aa1d43a59694c70de9148/Canvas_picture_frame.png"></div>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+
+      <!--   <img id="frame" src="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/242/2ce0b2ba9d8aa1d43a59694c70de9148/Canvas_picture_frame.png" style="display: none" width="132" height="150">
+         -->
+        <button id="foo">download img</button>
+
+        <div id="preview">
+          Preview:
 
 
-      <!-- Modal -->
-      <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title h1">Wallpaper Maker</h4>
-            </div>
-
-            <div class="modal-body">
-              <!-- Orientation section -->
-              <div class="main" id="orientation">
-                <h4 class="h4-modal">Would you like the orientation to be potrait or landscape?</h4>
-
-
-
-                <img id="icon" class="rotate-icon" src="icon.svg" alt="icon">
-                <div class="centered" id="orientation-text">Potrait</div>
-                <br>
-              </div>
-
-
-              <!-- Download section -->
-              <div class="main" id="download">
-
-                <div id=myTable style="text-align: center">
-
-                  <table id="myTable-Landscape">
-                    <tr>
-                      <td class = "td1"></td>
-
-                      <td class = "td2"></td>
-                    </tr>
-
-                  </table>
-
-                  <table id="myTable-Potrait">
-                    <tr>
-                      <td class = "td1"></td>
-                    </tr>
-                    <tr>
-                      <td class = "td2"></td>
-                    </tr>
-
-                  </table>
-
-                </div>
-
-                <img id="frame" src="Canvas_picture_frame.png" width="132" height="150">
-  
-                
-                <a id="download-button"><button class="download-btn"> Download</button></a>
-
-                <div id="preview">
-                  Preview:
-                  <br>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default close-button" data-dismiss="modal">Close</button>
-            </div>
-          </div>
 
         </div>
       </div>
+
 
 
     </main>
