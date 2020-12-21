@@ -13,16 +13,7 @@ body {
   font-weight: 300 !important;
   line-height: 1.5;
   text-align: center;
-
   color: #710303 !important;
-}
-
-img {
-  display: none;
-}
-
-.image {
-  margin-top: 20px !important;
 }
 
 .welcome-message {
@@ -37,7 +28,6 @@ img {
 
 .quote {
   color: #710303 !important;
-
 }
 
 .quote-footer {
@@ -45,95 +35,11 @@ img {
   opacity: 0.7;
 }
 
-
-
-/* selected  style */
-.blue {
-  border: 3px solid white;
-  opacity: 0.8;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/* Modal Styles */
-
-.modal-content {
-  background-color: #bc8f9a !important;
-  
-}
-
-
-
 #orientation {
-  height: 500px;
+  height: 200;
   text-align: center;
-
+  display: none;
 }
-
-
-.h4-modal {
-  text-align: center;
-  /* font-family: 'Barlow Semi Condensed', sans-serif !important; */
-  text-transform: uppercase;
-  font-size: 3vw;
-  margin-top: 2%;
-  text-transform: uppercase;
-  color: #e1ccd1 !important;
-  font-weight: 200 !important;
-}
-
-#icon {
-  display: block;
-  margin-top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  cursor: pointer;
-
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  outline: 0;
-}
-
-#icon.active {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.button {
-  display: block;
-  margin: 0 auto;
-  border: 2px solid #bc8f9a;
-  background-color: Transparent !important;
-  color: #710303;
-  border-radius: 10px;
-  padding: 8px 18px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 50%;
-}
-
-.button:hover {
-  background-color: #710303 !important;
-  border: 2px solid #710303;
-  color: white;
-  transition: 1s ease;
-  /* delays for 1 second */
-  -webkit-transition: all 1s ease;
-  /* for Safari & Chrome */
-
-}
-
-
 
 /* Centered text */
 .centered {
@@ -141,60 +47,9 @@ img {
   font-weight: bold;
   text-align: center;
   color: #c69fa8;
-
 }
 
-/* download section */
-
-#download {
-  display: none;
-}
-
-table {
-  margin: 0 auto;
-
-}
-
-td {
-  padding: 15px;
-  width: 200px;
-
-}
-
-#myTable {
-  margin-top: 30px;
-  height: 600px;
-  margin-left: 20px;
-  margin-right: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
-  border-radius: 25px;
-  position: relative;
-
-
-}
-
-#myTable-Potrait {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-
-}
-
-#myTable-Landscape {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
-
-
+/* Download Section */
 .download-btn {
   background-color: Transparent !important;
   border: 1px solid #c69fa8 !important;
@@ -219,26 +74,104 @@ td {
   /* delays for 1 second */
   -webkit-transition: all 1s ease;
   /* for Safari & Chrome */
-
 }
 
-#preview img{
-  display: inline !important;
+.blue {
+  border: 3px solid white;
+  opacity: 0.8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.close-button {
-  background-color: #710303 !important;
-  color: white !important;
-  border: transparent !important;
+table {
+  margin: 0 auto;
 }
 
-.close-button:hover {
+td {
+  padding: 15px;
+  width: 200px;
+}
 
-  background-color: #bc8f9a !important;
-  color: #710303 !important;
-  transition: 1s ease !important;
-  /* delays for 1 second */
-  -webkit-transition: all 1s ease;
-  /* for Safari & Chrome */
+.td1 img {
+  width: 150px;
+  height: 150px;
+}
 
+.td2 img {
+  width: 150px;
+  height: 150px;
+}
+
+#download {
+  border: 2px solid red;
+  display: none;
+}
+
+#myTable {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  border-radius: 25px;
+  position: relative;
+}
+
+.frame-Landscape {
+  position: relative;
+  margin-top: 50% !important;
+  /* // top: auto !imporant; */
+  left: 5%;
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.topImage-Landscape {
+  position: absolute;
+  margin-top: 64% !important;
+  left: 20%;
+}
+
+.frame-Potrait {
+  position: relative;
+  margin-top: 50% !important;
+  /* // top: auto !imporant; */
+  left: 5%;
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.topImage-Potrait {
+  position: absolute;
+  margin-top: 64% !important;
+  left: 20%;
+}
+
+#myTable-Potrait {
+  text-align: center;
+}
+
+#icon {
+  display: block;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  cursor: pointer;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  outline: 0;
+}
+
+#icon.active {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
