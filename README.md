@@ -1,1 +1,1 @@
-Quick wallpaper maker that combines two square paintings 
+Quick wallpaper maker that made from two of my paintings 
