@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300&display=swap');
 
-
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #e1ccd1 !important;
@@ -50,7 +51,7 @@ body {
 }
 
 /* Download Section */
-.download-btn {
+.buttons {
   background-color: Transparent !important;
   border: 1px solid #c69fa8 !important;
   text-transform: uppercase;
@@ -65,12 +66,22 @@ body {
   font-size: 16px;
   cursor: pointer;
   transform: translateX(50%);
+  transition: border 1s;
 }
 
-.download-btn:hover {
+.MakeWallpaper-ready{
+  border: 1px solid #970404 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+  transition: border .25s, box-shadow .25s;
+
+}
+
+.buttons:hover {
   background-color: #710303 !important;
+  border: 1px solid #710303 !important;
+  opacity: 0.9;
   color: white;
-  transition: 1s ease;
+  transition: 2s ease;
   /* delays for 1 second */
   -webkit-transition: all 1s ease;
   /* for Safari & Chrome */
@@ -92,17 +103,16 @@ td {
 }
 
 .td1 img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 .td2 img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 #download {
-  border: 2px solid red;
   display: none;
 }
 
@@ -121,13 +131,13 @@ td {
   margin-top: 50% !important;
   /* // top: auto !imporant; */
   left: 5%;
-  width: 200px !important;
-  height: 200px !important;
+  width: 150px !important;
+  height: 150px !important;
 }
 
 .topImage-Landscape {
   position: absolute;
-  margin-top: 64% !important;
+  margin-top: 60% !important;
   left: 20%;
 }
 
@@ -136,13 +146,13 @@ td {
   margin-top: 50% !important;
   /* // top: auto !imporant; */
   left: 5%;
-  width: 200px !important;
-  height: 200px !important;
+  width: 150px !important;
+  height: 150px !important;
 }
 
 .topImage-Potrait {
   position: absolute;
-  margin-top: 64% !important;
+  margin-top: 60% !important;
   left: 20%;
 }
 
