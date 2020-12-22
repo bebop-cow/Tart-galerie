@@ -2,46 +2,6 @@
 let selected = [];
 
 
-//Draw Function
-function draw() {
-
-  var mytable = document.getElementById('myTable');
-  var images = mytable.getElementsByTagName('img');
-
-
-
-  // Loop through all images
-  for (var i = 0; i < images.length; i++) {
-
-
-    // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id') != 'frame') {
-
-      // Create canvas element
-      var canvas = document.createElement('canvas');
-
-      canvas.setAttribute('width', 160);
-      canvas.setAttribute('height', 160);
-      /* canvas.setAttribute("style", "background: blue") */
-
-
-
-      // Insert before the image
-      images[i].parentNode.insertBefore(canvas, images[i]);
-
-      var ctx = canvas.getContext('2d');
-
-      // Draw image to canvas
-      ctx.drawImage(images[i], 21, 20, 110, 110);
-
-      // Add frame
-      ctx.drawImage(document.getElementById('frame'), 0, 0, 150, 150);
-    }
-  }
-
-
-}
-
 //Image selection
 $(document).ready(function() {
 
@@ -59,11 +19,14 @@ $(document).ready(function() {
       console.log("array full, deselect an image to add a seperate one")
       selected.pop(this.id);
     } else if (selected.length == 2) {
-      $("#MakeWallpaper-button").show();
+      $("#MakeWallpaper-button").addClass('MakeWallpaper-ready');
       $("#" + id).toggleClass("blue");
     } else {
       $("#" + id).toggleClass("blue"); //Adds the appearance of being selected
-      $("#MakeWallpaper-button").hide(); //keeps the button hidden
+      $("#MakeWallpaper-button").removeClass('MakeWallpaper-ready'); //keeps the button hidden
+      $("#orientation").hide();
+      $("#download").hide();
+
     }
 
     $('#MakeWallpaper-button').click(function() {
@@ -78,7 +41,7 @@ $(document).ready(function() {
       $(".td1").css("display", "");
       $(".td2").css("display", "");
 
-      $("#orientation").css("display", "inline");
+      $("#orientation").show();
 
     });
 
@@ -91,7 +54,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('#icon').on('click', function() {
     $('#icon').toggleClass('active');
-    $('#download').css("display", "inline");
+    $('#download').show();
 
     var text = $('#orientation-text').text();
     $("#orientation-text").text(
@@ -103,7 +66,7 @@ $(document).ready(function() {
       $("#myTable").css({
         "height": "600px",
         "transition": "width 3s, height 3s",
-        "width": "800px	",
+        "width": "1000px	",
         "margin-left": "",
         "margin-right": ""
       });
@@ -114,9 +77,9 @@ $(document).ready(function() {
       $("#myTable-Potrait").css("display", "inline");
       $("#myTable-Landscape").css("display", "none");
       $("#myTable").css({
-        "height": "800px",
+        "height": "700px",
         "transition": "width 3s, height 3s",
-        "width": "600px",
+        "width": "500px",
         "margin-left": "",
         "margin-right": ""
       });
