@@ -1,6 +1,44 @@
 //Global Variable
 let selected = [];
 
+
+
+$(document).ready(function() {
+	$('.collapsible').each(function() {
+		var tis = $(this), state = false, answer = tis.next('div').slideUp();
+		tis.click(function() {
+			state = !state;
+			answer.slideToggle(state);
+			tis.toggleClass('active',state);
+		});
+	});
+});
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
 //Image selection
 $(document).ready(function() {
 
@@ -8,7 +46,7 @@ $(document).ready(function() {
     var id = ($(this).attr('id')); //gets the id of the image that was clicked and passes it to the variable id
 
     //This handles a double click for deselection.
-    const myIndex = selected.indexOf(id); //Checks the array (selected) to see if the value of id is present. 
+    const myIndex = selected.indexOf(id); //Checks the array (selected) to see if the value of id is present.
     //if true: removes the id - if false: adds the id
     myIndex > -1 ? selected.splice(myIndex, 1) : selected.push(this.id);
 
@@ -18,34 +56,45 @@ $(document).ready(function() {
       console.log("array full, deselect an image to add a seperate one")
       selected.pop(this.id);
     } else if (selected.length == 2) {
-      $("#btn").show();
+      $("#MakeWallpaper-button").addClass('MakeWallpaper-ready');
       $("#" + id).toggleClass("blue");
+      document.querySelector('#MakeWallpaper-button').scrollIntoView({
+        behavior: 'smooth'
+      });
     } else {
       $("#" + id).toggleClass("blue"); //Adds the appearance of being selected
-      $("#btn").hide(); //keeps the modal button hidden
+      $("#MakeWallpaper-button").removeClass('MakeWallpaper-ready'); //keeps the button hidden
+      $("#orientation").hide();
+      $("#download").hide();
+
     }
 
-    $('#btn').click(function() {
+    $('#MakeWallpaper-button').click(function() {
 
       let firstImageSelected = $("#" + selected[0]).attr('src');
       let secondImageSelected = $("#" + selected[1]).attr('src');
 
-      $('.td1').html('<img  class="image" src=' + firstImageSelected + ' alt="Square">');
-      $('.td2').html('<img  class="image" src=' + secondImageSelected + ' alt="Square">');
-      draw();
+      $('.td1-Image').attr("src", firstImageSelected);
+
+      $('.td2-Image').attr("src", secondImageSelected);
+
+      $(".td1").css("display", "");
+      $(".td2").css("display", "");
+
+      $("#orientation").show();
 
     });
 
   });
 });
 
-//Modal 
 
-//Orientation 
+
+//Orientation
 $(document).ready(function() {
   $('#icon').on('click', function() {
     $('#icon').toggleClass('active');
-    $('#download').css("display", "block")
+    $('#download').show();
 
     var text = $('#orientation-text').text();
     $("#orientation-text").text(
@@ -53,84 +102,63 @@ $(document).ready(function() {
 
     if (text !== "Landscape") {
       $("#myTable-Landscape").css("display", "inline");
+      $("#myTable-Potrait").css("display", "none");
       $("#myTable").css({
-        "height": "400px",
+        "height": "600px",
         "transition": "width 3s, height 3s",
-        "width": "",
+        "width": "1000px	",
         "margin-left": "",
         "margin-right": ""
       });
-      $("#myTable-Potrait").css("display", "none");
+
 
 
     } else {
       $("#myTable-Potrait").css("display", "inline");
+      $("#myTable-Landscape").css("display", "none");
       $("#myTable").css({
-        "height": "600px",
-        "width": "300px",
+        "height": "800px",
         "transition": "width 3s, height 3s",
-        "margin-left": "auto",
-        "margin-right": "auto"
+        "width": "500px",
+        "margin-left": "",
+        "margin-right": ""
       });
 
-      $("#myTable-Landscape").css("display", "none");
-
-    }
+    };
   });
 });
+function saveAs(uri, filename) {
+        var link = document.createElement('a');
+        if (typeof link.download === 'string') {
+          link.href = uri;
+          link.download = filename;
+
+          //Firefox requires the link to be in the body
+          document.body.appendChild(link);
+
+          //simulate click
+          link.click();
+
+          //remove the link when done
+          document.body.removeChild(link);
+        } else {
+          window.open(uri);
+        }
+      }
 
 
+$(document).ready(function() {
+  $("#foo").click(function() {
+    var convertMeToImg = $('#myTable')[0];
+    html2canvas(convertMeToImg, {
+      scale: 4,
+      allowTaint: true,
+      useCORS: true,
+      logging: true,
+    }).then(function(canvas) {
+      $('#preview').append(canvas);
+      saveAs(canvas.toDataURL(), 'canvas.png');
+    });
+  });
 
-
-//Draw Function
-function draw() {
-
-  var mytable = document.getElementById('myTable');
-  var images = mytable.getElementsByTagName('img');
-
-
-
-  // Loop through all images
-  for (var i = 0; i < images.length; i++) {
-
-    /* console.log(images.length);
-    console.log($(".imgGallery").length); */
-
-    // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id') != 'frame') {
-
-      // Create canvas element
-      var canvas = document.createElement('canvas');
-      /*  canvas.setAttribute('width', 132);
-       canvas.setAttribute('height', 150); */
-      canvas.setAttribute('width', 160);
-      canvas.setAttribute('height', 160);
-
-      // Insert before the image
-      images[i].parentNode.insertBefore(canvas, images[i]);
-
-      var ctx = canvas.getContext('2d');
-
-      // Draw image to canvas
-      ctx.drawImage(images[i], 21, 20, 110, 110);
-
-      // Add frame
-      ctx.drawImage(document.getElementById('frame'), 0, 0, 150, 150);
-    }
-  }
-  
-}
-
-var btn = document.getElementById('download-button');
-
-btn.onclick = function() {
-html2canvas(document.querySelector("#myTable"),{
-            allowTaint:true,
-            useCORS	:true,
-            foreignObjectRendering: true,
-            useCors: true
-        }).then(canvas => {
-    $("#preview").append(canvas)
 });
-
-}
