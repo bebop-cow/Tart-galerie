@@ -2,6 +2,19 @@
 let selected = [];
 
 
+
+$(document).ready(function() {
+	$('.collapsible').each(function() {
+		var tis = $(this), state = false, answer = tis.next('div').slideUp();
+		tis.click(function() {
+			state = !state;
+			answer.slideToggle(state);
+			tis.toggleClass('active',state);
+		});
+	});
+});
+
+
 //Image selection
 $(document).ready(function() {
 
@@ -21,6 +34,9 @@ $(document).ready(function() {
     } else if (selected.length == 2) {
       $("#MakeWallpaper-button").addClass('MakeWallpaper-ready');
       $("#" + id).toggleClass("blue");
+      document.querySelector('#MakeWallpaper-button').scrollIntoView({
+        behavior: 'smooth'
+      });
     } else {
       $("#" + id).toggleClass("blue"); //Adds the appearance of being selected
       $("#MakeWallpaper-button").removeClass('MakeWallpaper-ready'); //keeps the button hidden
