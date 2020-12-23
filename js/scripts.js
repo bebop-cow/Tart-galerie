@@ -117,7 +117,7 @@ $(document).ready(function() {
       $("#myTable-Potrait").css("display", "inline");
       $("#myTable-Landscape").css("display", "none");
       $("#myTable").css({
-        "height": "700px",
+        "height": "800px",
         "transition": "width 3s, height 3s",
         "width": "500px",
         "margin-left": "",
