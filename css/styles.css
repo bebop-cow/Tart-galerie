@@ -286,3 +286,8 @@ td {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
+#preview {
+  text-align: center;
+  margin-top: 50px;
+}

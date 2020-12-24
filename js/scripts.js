@@ -95,6 +95,7 @@ $(document).ready(function() {
   $('#icon').on('click', function() {
     $('#icon').toggleClass('active');
     $('#download').show();
+    $('#preview').empty();
 
     var text = $('#orientation-text').text();
     $("#orientation-text").text(
@@ -117,7 +118,7 @@ $(document).ready(function() {
       $("#myTable-Potrait").css("display", "inline");
       $("#myTable-Landscape").css("display", "none");
       $("#myTable").css({
-        "height": "800px",
+        "height": "700px",
         "transition": "width 3s, height 3s",
         "width": "500px",
         "margin-left": "",
@@ -151,6 +152,7 @@ $(document).ready(function() {
   $("#foo").click(function() {
     var convertMeToImg = $('#myTable')[0];
     html2canvas(convertMeToImg, {
+      scrollY: -window.scrollY,
       scale: 4,
       allowTaint: true,
       useCORS: true,
