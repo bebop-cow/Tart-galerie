@@ -42,11 +42,8 @@ hr {
 
 .donate{
   color: #492b2b;
-   /* font-family: 'Barlow Semi Condensed', sans-serif !important; */
-  /* text-transform: uppercase; */
   opacity: 0.7;
   font-size: 1.2vw;
-  /* margin-left: 80px; */
   cursor: pointer;
 }
 
@@ -61,7 +58,7 @@ hr {
  border: none;
  text-align: center;
  outline: none;
- font-size: 1.2vw;
+ font-size: 1.4vw;
 
 }
 
