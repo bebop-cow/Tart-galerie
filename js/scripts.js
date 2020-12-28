@@ -150,6 +150,7 @@ function saveAs(uri, filename) {
 
 $(document).ready(function() {
   $("#foo").click(function() {
+    $(".save").css("display", "block");
     var convertMeToImg = $('#myTable')[0];
     html2canvas(convertMeToImg, {
       scrollY: -window.scrollY,
@@ -159,7 +160,7 @@ $(document).ready(function() {
       logging: true,
     }).then(function(canvas) {
       $('#preview').append(canvas);
-      saveAs(canvas.toDataURL(), 'canvas.png');
+      saveAs(canvas.toDataURL(), 'tartWallpaper.png');
     });
   });
 
