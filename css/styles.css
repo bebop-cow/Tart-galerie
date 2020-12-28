@@ -138,7 +138,7 @@ hr {
 
 }
 .row{
-  text-align: right;
+  text-align: center;
 }
 
 .image{
@@ -198,7 +198,7 @@ hr {
   font-size: 16px;
   cursor: pointer;
   transform: translateX(50%);
-    transition: color .25s, border .25s, box-shadow .25s;
+  transition: color .25s, border .25s, box-shadow .25s;
 }
 
 .MakeWallpaper-ready{
