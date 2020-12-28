@@ -33,6 +33,7 @@ hr {
 
 .quote {
   color: #710303 !important;
+
 }
 
 .quote-footer {
@@ -124,6 +125,7 @@ hr {
   border-radius: 10px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
+
 #collection{
   font-family: 'Barlow Semi Condensed', sans-serif !important;
   font-size: 3vw;
@@ -334,4 +336,18 @@ td {
   color: #c69fa8;
   margin-top: 20px;
   display: none;
+}
+
+.footer {
+
+  font-weight: 300;
+  font-size: 1.3vw;
+  opacity: 0.95;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  background-color: #e8dbd8;
+  color: #bc8f9a;
+  text-align: center;
 }
