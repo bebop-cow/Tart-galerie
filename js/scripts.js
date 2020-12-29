@@ -66,6 +66,10 @@ $(document).ready(function() {
       $("#MakeWallpaper-button").removeClass('MakeWallpaper-ready'); //keeps the button hidden
       $("#orientation").hide();
       $("#download").hide();
+      $("body").css({"background-color":"#e1ccd1", "transition": "background-color 1s"});
+      $(".h1, #donate, #collection").removeClass("change");
+      $(".quote, .quote-footer").removeClass("change2");
+
 
     }
 
@@ -111,9 +115,6 @@ $(document).ready(function() {
         "margin-left": "",
         "margin-right": ""
       });
-
-
-
     } else {
       $("#myTable-Potrait").css("display", "inline");
       $("#myTable-Landscape").css("display", "none");
@@ -126,6 +127,9 @@ $(document).ready(function() {
       });
 
     };
+    $("body").css({"background-color":"#6e404b", "transition": "background-color 1s"});
+    $(".h1, #donate, #collection").addClass("change");
+    $(".quote, .quote-footer").addClass("change2");
   });
 });
 function saveAs(uri, filename) {
