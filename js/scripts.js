@@ -157,7 +157,7 @@ $(document).ready(function() {
     $(".save").css("display", "block");
     var convertMeToImg = $('#myTable')[0];
     html2canvas(convertMeToImg, {
-      scrollY: -window.scrollY,
+      scrollY: -convertMeToImg.scrollY,
       scale: 4,
       allowTaint: true,
       useCORS: true,

@@ -3,12 +3,9 @@
 /* html {
   scroll-behavior: smooth;
 } */
-
 body {
-  background-color: #e1ccd1 ;
+  background-color: #e1ccd1;
 }
-
-
 
 hr {
   border-color: #e8dbd8;
@@ -34,16 +31,15 @@ hr {
 }
 
 .quote {
-  color: #710303 ;
-
+  color: #710303;
 }
 
 .quote-footer {
-  color: #492b2b ;
+  color: #492b2b;
   opacity: 0.7;
 }
 
-.donate{
+.donate {
   color: #492b2b;
   opacity: 0.7;
   font-size: 1.2vw;
@@ -52,83 +48,75 @@ hr {
 
 /*Collapsible content */
 .collapsible {
- background-color: transparent;
- color: #492b2b;
- cursor: pointer;
- opacity: 0.9;
- padding: 10px;
- width: 15%;
- border: none;
- text-align: center;
- outline: none;
- font-size: 1.4vw;
-
+  background-color: transparent;
+  color: #492b2b;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 10px;
+  width: 15%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 1.4vw;
 }
 
 .active, .collapsible:hover {
- background-color: transparent;
- text-transform: capitalize;
- text-decoration: underline;
-
-
+  background-color: transparent;
+  text-transform: capitalize;
+  text-decoration: underline;
 }
-
 
 .content {
- padding: 0 10px;
- display: none;
- overflow: hidden;
- background-color: #e8dbd8;
- border-radius: 10px;
- opacity: 0.8;
- box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.1);
-
+  padding: 0 10px;
+  display: none;
+  overflow: hidden;
+  background-color: #e8dbd8;
+  border-radius: 10px;
+  opacity: 0.8;
+  box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.1);
 }
-
 
 /* Table in collapsible */
 .Donaterow {
- margin-left:-5px;
- margin-right:-5px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
 .Donatecolumn {
- float: left;
- width: 50%;
- padding: 5px;
+  float: left;
+  width: 50%;
+  padding: 5px;
 }
 
 /* Clearfix (clear floats) */
 .Donaterow::after {
- content: "";
- clear: both;
- display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .DonateTable {
- border-collapse: collapse;
- border-spacing: 0;
- width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
 }
 
 .DonateTable th, td {
- text-align: center !important;
- text-transform: uppercase;
- font-weight: bold;
- color: #bc8f9a;
- padding: 16px;
-
-
-
+  text-align: center !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #bc8f9a;
+  padding: 16px;
 }
-.payment{
+
+.payment {
   width: auto;
   height: 300px;
   border-radius: 10px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-#collection{
+#collection {
   font-family: 'Barlow Semi Condensed', sans-serif !important;
   font-size: 3vw;
   text-transform: capitalize;
@@ -138,17 +126,19 @@ hr {
   color: #710303;
   text-decoration: underline;
 }
-.row{
+
+.row {
   text-align: center;
 }
 
-.image{
+.image {
   margin-top: 20px;
   margin-bottom: 10px;
   cursor: pointer;
 }
+
 .image:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .caption {
@@ -156,7 +146,7 @@ hr {
   font-size: 1.2vw;
   margin-right: 1%;
   border-radius: 2px;
-  padding : 5px;
+  padding: 5px;
   background-color: #5b1919;
   color: #e1ccd1;
   opacity: 0.9;
@@ -201,12 +191,11 @@ hr {
   transition: color .25s, border .25s, box-shadow .25s;
 }
 
-.MakeWallpaper-ready{
+.MakeWallpaper-ready {
   color: #c69fa8;
   border: 1px solid #970404 !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
   transition: color .50s, border .25s, box-shadow .25s;
-
 }
 
 .buttons:hover {
@@ -250,8 +239,13 @@ td {
 }
 
 @keyframes pulse_animation {
-  0% { box-shadow: 0 0 0 0 rgba(94, 2, 2, 0.8) }
-  100% { box-shadow: 0 0 0 200px rgba(94, 2, 2, 0) }
+  0% {
+    box-shadow: 0 0 0 0 rgba(94, 2, 2, 0.8)
+  }
+
+  100% {
+    box-shadow: 0 0 0 200px rgba(94, 2, 2, 0)
+  }
 }
 
 #pulse-wrapper {
@@ -261,21 +255,27 @@ td {
   height: 100%;
   overflow: hidden;
 }
+
 #pulse-wrapper #pulse {
   margin: auto;
 }
+
 #pulse-wrapper #pulse span {
   position: absolute;
-  margin-top: -25px; /* = height / 2 */
-  margin-left: -25px; /* = width / 2 */
+  margin-top: -25px;
+  /* = height / 2 */
+  margin-left: -25px;
+  /* = width / 2 */
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: #5e0202;
   animation: pulse_animation 1.3s infinite;
 }
+
 #pulse-wrapper #pulse span:nth-child(2) {
-  animation-delay: 0.4s; /* Start the second wave with some delay */
+  animation-delay: 0.4s;
+  /* Start the second wave with some delay */
 }
 
 #myTable {
@@ -365,27 +365,26 @@ td {
 }
 
 .footer {
-
+  width: 40%;
+  position: fixed;
+  left: -19%;
+  top: 50%;
+  font-family: 'Barlow Semi Condensed', sans-serif !important;
   font-weight: 300;
   font-size: 1.3vw;
-  opacity: 0.9;
-  margin-left: 20%;
-  margin-right: 20%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width:60%;
+  opacity: 0.8;
   border-radius: 10px 10px 0 0;
   background-color: #e8dbd8;
-  color: #bc8f9a;
+  color: #5e0202;
   text-align: center;
+  transform: rotate(-270deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .change {
   color: #fdb1b1 !important;
-  
 }
 
-.change2{
+.change2 {
   color: #e8dbd8 !important;
 }
