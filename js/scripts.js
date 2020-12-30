@@ -4,17 +4,19 @@ let selected = [];
 
 
 $(document).ready(function() {
-	$('.collapsible').each(function() {
-		var tis = $(this), state = false, answer = tis.next('div').slideUp();
-		tis.click(function() {
-			state = !state;
-			answer.slideToggle(state);
-			tis.toggleClass('active',state);
-		});
-	});
+  $('.collapsible').each(function() {
+    var tis = $(this),
+      state = false,
+      answer = tis.next('div').slideUp();
+    tis.click(function() {
+      state = !state;
+      answer.slideToggle(state);
+      tis.toggleClass('active', state);
+    });
+  });
 });
 
-$(document).ready(function(){
+$(document).ready(function() {
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
 
@@ -30,7 +32,7 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 800, function(){
+      }, 800, function() {
 
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
@@ -66,7 +68,10 @@ $(document).ready(function() {
       $("#MakeWallpaper-button").removeClass('MakeWallpaper-ready'); //keeps the button hidden
       $("#orientation").hide();
       $("#download").hide();
-      $("body").css({"background-color":"#e1ccd1", "transition": "background-color 1s"});
+      $("body").css({
+        "background-color": "#e1ccd1",
+        "transition": "background-color 1s"
+      });
       $(".h1, #donate, #collection").removeClass("change");
       $(".quote, .quote-footer").removeClass("change2");
 
@@ -96,16 +101,24 @@ $(document).ready(function() {
 
 //Orientation
 $(document).ready(function() {
-  $('#icon').on('click', function() {
-    $('#icon').toggleClass('active');
+  $("#Landscape").hover(function() {
+    $("#icon").addClass("active");
+  })
+  $("#Potrait").hover(function() {
+    $("#icon").removeClass("active");
+  })
+});
+
+
+$(document).ready(function() {
+  $('.orientationBtn').on('click', function() {
+
     $('#download').show();
     $('#preview').empty();
 
-    var text = $('#orientation-text').text();
-    $("#orientation-text").text(
-      text == "Potrait" ? "Landscape" : "Potrait");
+    var text = ($(this).attr('id'));
 
-    if (text !== "Landscape") {
+    if (text !== "Potrait") {
       $("#myTable-Landscape").css("display", "inline");
       $("#myTable-Potrait").css("display", "none");
       $("#myTable").css({
@@ -127,29 +140,33 @@ $(document).ready(function() {
       });
 
     };
-    $("body").css({"background-color":"#6e404b", "transition": "background-color 1s"});
+    $("body").css({
+      "background-color": "#6e404b",
+      "transition": "background-color 1s"
+    });
     $(".h1, #donate, #collection").addClass("change");
     $(".quote, .quote-footer").addClass("change2");
   });
 });
+
 function saveAs(uri, filename) {
-        var link = document.createElement('a');
-        if (typeof link.download === 'string') {
-          link.href = uri;
-          link.download = filename;
+  var link = document.createElement('a');
+  if (typeof link.download === 'string') {
+    link.href = uri;
+    link.download = filename;
 
-          //Firefox requires the link to be in the body
-          document.body.appendChild(link);
+    //Firefox requires the link to be in the body
+    document.body.appendChild(link);
 
-          //simulate click
-          link.click();
+    //simulate click
+    link.click();
 
-          //remove the link when done
-          document.body.removeChild(link);
-        } else {
-          window.open(uri);
-        }
-      }
+    //remove the link when done
+    document.body.removeChild(link);
+  } else {
+    window.open(uri);
+  }
+}
 
 
 $(document).ready(function() {
