@@ -1,19 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300&display=swap');
-
-@media screen and (max-width: 768px) {
+/*
+@media only screen and (max-width: 600px) {
   .h1{
-    font-size: 5vw;
+    font-size: 1m;
   }
-  .welcome-message{
-    font-size: 3.5vw;
-  }
-  .donate{
-    font-size: 3.5vw !important;
-  }
-  #icon {
-    width: 50%;
-  }
-}
+} */
 body {
   background-color: #e1ccd1;
 }
@@ -21,7 +12,9 @@ body {
 hr {
   border-color: #e8dbd8;
 }
+/* @media only screen and (min-width: 1200px) {
 
+} */
 .h1 {
   font-family: 'Barlow Semi Condensed', sans-serif !important;
   font-size: 3.5vw;
@@ -195,6 +188,7 @@ hr {
 
 .orientationBtn:hover{
   opacity: 0.5 !important;
+  
 }
 
 #icon {
