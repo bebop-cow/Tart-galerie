@@ -7,6 +7,31 @@ hr {
   border-color: #e8dbd8;
 }
 @media only screen and (max-width: 999px) {
+
+  .welcome-message {
+    font-size: 3vw !important;
+  }
+
+  #donate{
+    font-size: 4vw;
+    margin-right: 5%;
+  }
+
+  .donate{
+    font-size: 4vw !important;
+  }
+
+  .Donatecolumn {
+    float: none;
+    width: auto;
+    padding: 5px;
+  }
+
+  #collection{
+      font-size: 7vw;
+  }
+
+
   #icon{
     display: none !important;
   }
@@ -63,11 +88,21 @@ hr {
   }
 
   .quote{
+    font-size: 1.5vw;
+  }
 
+  .collapsible{
+    font-size: 1.4vw;
   }
 
   .donate {
       font-size: 1.2vw;
+  }
+
+  .Donatecolumn {
+    float: left;
+    width: 50%;
+    padding: 5px;
   }
 
   #collection{
@@ -122,6 +157,8 @@ hr {
       font-size: 1.3vw;
   }
 }
+
+/* page */
 .h1 {
   font-family: 'Barlow Semi Condensed', sans-serif !important;
   font-weight: 300 !important;
@@ -166,7 +203,7 @@ hr {
   border: none;
   text-align: center;
   outline: none;
-  font-size: 1.4vw;
+
 }
 
 .active, .collapsible:hover {
@@ -191,11 +228,6 @@ hr {
   margin-right: -5px;
 }
 
-.Donatecolumn {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
 
 /* Clearfix (clear floats) */
 .Donaterow::after {
