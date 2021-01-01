@@ -122,9 +122,9 @@ $(document).ready(function() {
       $("#myTable-Landscape").css("display", "inline");
       $("#myTable-Potrait").css("display", "none");
       $("#myTable").css({
-        "height": "600px",
+        "height": "60%",
         "transition": "width 3s, height 3s",
-        "width": "1000px	",
+        "width": "80%	",
         "margin-left": "",
         "margin-right": ""
       });
@@ -132,9 +132,9 @@ $(document).ready(function() {
       $("#myTable-Potrait").css("display", "inline");
       $("#myTable-Landscape").css("display", "none");
       $("#myTable").css({
-        "height": "700px",
+        "height": "80%",
         "transition": "width 3s, height 3s",
-        "width": "500px",
+        "width": "60%",
         "margin-left": "",
         "margin-right": ""
       });
@@ -175,7 +175,7 @@ $(document).ready(function() {
     var convertMeToImg = $('#myTable')[0];
     html2canvas(convertMeToImg, {
       scrollY: -convertMeToImg.scrollY,
-      scale: 4,
+      scale: 1,
       allowTaint: true,
       useCORS: true,
       logging: true,
