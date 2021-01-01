@@ -122,9 +122,9 @@ $(document).ready(function() {
       $("#myTable-Landscape").css("display", "inline");
       $("#myTable-Potrait").css("display", "none");
       $("#myTable").css({
-        "height": "60%",
+        "height": "70%",
         "transition": "width 3s, height 3s",
-        "width": "80%	",
+        "width": "70%	",
         "margin-left": "",
         "margin-right": ""
       });
