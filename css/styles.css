@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300&display=swap');
+
 body {
   background-color: #e1ccd1;
 }
@@ -6,22 +7,22 @@ body {
 hr {
   border-color: #e8dbd8;
 }
-@media only screen and (max-width: 1024px) {
 
+@media only screen and (max-width: 1024px) {
   .welcome-message {
     font-size: 4vw !important;
   }
 
-  .quote{
+  .quote {
     font-size: 3vw;
   }
 
-  #donate{
+  #donate {
     font-size: 4vw;
     margin-right: 5%;
   }
 
-  .donate{
+  .donate {
     font-size: 4vw !important;
   }
 
@@ -31,19 +32,17 @@ hr {
     padding: 5px;
   }
 
-  #collection{
-      font-size: 7vw;
+  #collection {
+    font-size: 7vw;
   }
 
-
-  #icon{
+  #icon {
     display: none !important;
   }
 
-  .orientationBtn{
+  .orientationBtn {
     padding: 0 !important;
     font-size: 3vw;
-
   }
 
   .td1 img {
@@ -67,7 +66,7 @@ hr {
     position: absolute;
     margin-top: 21% !important;
     left: 20%;
-    height:60% !important;
+    height: 60% !important;
   }
 
   .frame-Potrait {
@@ -85,25 +84,24 @@ hr {
 }
 
 @media only screen and (min-width: 1025px) {
-  .h1{
+  .h1 {
     font-size: 3.5vw;
   }
 
-  .welcome-message{
-      font-size: 3vw;
+  .welcome-message {
+    font-size: 3vw;
   }
 
-  .quote{
+  .quote {
     font-size: 1.5vw;
   }
 
-
-  .collapsible{
+  .collapsible {
     font-size: 1.4vw;
   }
 
   .donate {
-      font-size: 1.2vw;
+    font-size: 1.2vw;
   }
 
   .Donatecolumn {
@@ -112,30 +110,28 @@ hr {
     padding: 5px;
   }
 
-  #collection{
-      font-size: 3vw;
+  #collection {
+    font-size: 3vw;
   }
 
   .caption {
-      font-size: 1.2vw;
+    font-size: 1.2vw;
   }
 
-  .orientationBtn{
-      font-size: 30px;
+  .orientationBtn {
+    font-size: 30px;
   }
 
-  .buttons{
-      font-size: 16px;
+  .buttons {
+    font-size: 16px;
   }
 
   .td1 img {
     width: 63%;
-
   }
 
   .td2 img {
     width: 63%;
-
   }
 
   .frame-Landscape {
@@ -161,7 +157,7 @@ hr {
   }
 
   .footer {
-      font-size: 1.3vw;
+    font-size: 1.3vw;
   }
 }
 
@@ -209,7 +205,6 @@ hr {
   border: none;
   text-align: center;
   outline: none;
-
 }
 
 .active, .collapsible:hover {
@@ -233,7 +228,6 @@ hr {
   margin-left: -5px;
   margin-right: -5px;
 }
-
 
 /* Clearfix (clear floats) */
 .Donaterow::after {
@@ -305,15 +299,15 @@ hr {
   display: none;
 }
 
-.col-xs-4{
+.col-xs-4 {
   margin-top: 7 %;
 }
 
-.col-xs-4 a:hover{
+.col-xs-4 a:hover {
   text-decoration: none;
 }
 
-.orientationBtn{
+.orientationBtn {
   width: 100%;
   height: 200px;
   background-color: transparent;
@@ -326,9 +320,8 @@ hr {
   display: block;
 }
 
-.orientationBtn:hover{
+.orientationBtn:hover {
   opacity: 0.5 !important;
-
 }
 
 #icon {
@@ -355,8 +348,6 @@ hr {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-
-
 
 /* Download Section */
 .buttons {
@@ -400,8 +391,6 @@ hr {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-
 #download {
   margin-top: 20%;
   display: none;
@@ -409,16 +398,17 @@ hr {
   height: 80vh;
 }
 
-
 #myTable {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: url("file:///C:/Users/tfernand/Documents/Atom/backgroundCanvas.png") 0 -100px repeat-x  #4F191A;
+  background-image: url(data:image/png;base64,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);
+  background-repeat: 0 -100px repeat-x;
   border-radius: 25px;
   position: relative;
 }
+
 table {
   margin: 0 auto;
 }
@@ -428,15 +418,9 @@ td {
   border 1px solid white;
 }
 
-
-
-
-
 #myTable-Potrait {
   text-align: center;
 }
-
-
 
 #preview {
   text-align: center;
