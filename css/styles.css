@@ -43,6 +43,7 @@ hr {
   .orientationBtn{
     padding: 0 !important;
     font-size: 3vw;
+
   }
 
   .td1 img {
@@ -95,6 +96,7 @@ hr {
   .quote{
     font-size: 1.5vw;
   }
+
 
   .collapsible{
     font-size: 1.4vw;
@@ -413,7 +415,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  background: url("file:///C:/Users/tfernand/Documents/Atom/backgroundCanvas.png") 0 -100px repeat-x  #4F191A;
   border-radius: 25px;
   position: relative;
 }

@@ -1,6 +1,20 @@
 //Global Variable
 let selected = [];
 
+var i = 0;
+var txt = 'If Trump can raise $200 million for his false post-election claims, surely I can sell my paintings this way and capture the market of artists that sell their paintings by creating wallpapers for people\'s screens, becoming a world famous artist along the way and eventually, being the most known artist out of Iberia since Picasso resulting in me taking a piss on his grave to ascend to my rightful position as number one. It is the prophecy. It must be fulfilled';
+
+
+function typeWriter() {
+
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, 25);
+  }
+
+}
+
 
 
 $(document).ready(function() {
@@ -172,16 +186,22 @@ function saveAs(uri, filename) {
 $(document).ready(function() {
   $("#foo").click(function() {
     $(".save").css("display", "block");
-    var convertMeToImg = $('#myTable')[0];
+    let tableDimensions = document.getElementById('myTable');
+    let tWidth = tableDimensions.offsetWidth;
+    let tHeight = tableDimensions.offsetHeight;
+    var convertMeToImg = $('#myTable');
     html2canvas(convertMeToImg, {
+      proxy: '',
+      width: tWidth,
+      height: tHeight,
+      scale: 1,
       scrollY: -convertMeToImg.scrollY,
-      scale: 5,
       allowTaint: true,
       useCORS: true,
       logging: true,
     }).then(function(canvas) {
       $('#preview').append(canvas);
-      saveAs(canvas.toDataURL(), 'tartWallpaper.png');
+      var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
     });
   });
 
