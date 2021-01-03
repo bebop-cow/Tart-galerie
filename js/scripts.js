@@ -1,22 +1,6 @@
 //Global Variable
 let selected = [];
 
-var i = 0;
-var txt = 'If Trump can raise $200 million for his false post-election claims, surely I can sell my paintings this way and capture the market of artists that sell their paintings by creating wallpapers for people\'s screens, becoming a world famous artist along the way and eventually, being the most known artist out of Iberia since Picasso resulting in me taking a piss on his grave to ascend to my rightful position as number one. It is the prophecy. It must be fulfilled';
-
-
-function typeWriter() {
-
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, 25);
-  }
-
-}
-
-
-
 $(document).ready(function() {
   $('.collapsible').each(function() {
     var tis = $(this),
