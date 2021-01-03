@@ -407,6 +407,7 @@ hr {
   background-repeat: 0 -100px repeat-x;
   border-radius: 25px;
   position: relative;
+  border-top: red;
 }
 
 table {
