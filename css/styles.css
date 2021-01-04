@@ -32,6 +32,10 @@ hr {
     padding: 5px;
   }
 
+  td, th {
+    display: block;
+  }
+
   #collection {
     font-size: 7vw;
   }
