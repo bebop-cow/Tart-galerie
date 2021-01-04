@@ -185,7 +185,7 @@ $(document).ready(function() {
       logging: true,
     }).then(function(canvas) {
       $('#preview').append(canvas);
-      var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+      window.open(canvas.toDataURL('image/png'));
     });
   });
 
