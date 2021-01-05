@@ -184,7 +184,7 @@ $(document).ready(function() {
       useCORS: true,
       logging: true,
     }).then(function(canvas) {
-      $('#preview').append(canvas);
+      // $('#preview').append(canvas);
       window.open(canvas.toDataURL('image/png'));
     });
   });
