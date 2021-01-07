@@ -164,12 +164,7 @@ hr {
     font-size: 1.3vw;
   }
 
-  #bmc-wbtn {
-    height: 40px !important;
-  }
-  #bmc-wbtn img {
-    height: 30px !important;
-  }
+
 }
 
 /* page */
@@ -189,7 +184,12 @@ hr {
   margin-top: 1px;
   padding-left: 3%;
 }
+#letter {
+  font-family: 'Barlow Semi Condensed', sans-serif !important;
+   
+  font-size: 2vw;
 
+}
 .quote {
   color: #710303;
 }
