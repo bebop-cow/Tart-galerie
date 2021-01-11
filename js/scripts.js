@@ -187,7 +187,7 @@ $(document).ready(function() {
 
       var a = document.createElement('a');
       a.href = canvas.toDataURL('image/png');
-      a.download = 'image.png';
+      a.download = 'tartWallpaper.png';
 
       a.click()
       // $('#preview').append(canvas);
