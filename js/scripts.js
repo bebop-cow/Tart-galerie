@@ -184,8 +184,14 @@ $(document).ready(function() {
       useCORS: true,
       logging: true,
     }).then(function(canvas) {
+
+      var a = document.createElement('a');
+      a.href = canvas.toDataURL('image/png');
+      a.download = 'image.png';
+
+      a.click()
       // $('#preview').append(canvas);
-      window.open(canvas.toDataURL('image/png'));
+      // window.open(canvas.toDataURL('image/png'));
     });
   });
 
