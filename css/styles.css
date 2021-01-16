@@ -186,7 +186,7 @@ hr {
   margin-top: 1px;
   padding-left: 3%;
 }
-#letter {
+.letter {
   font-family: 'Barlow Semi Condensed', sans-serif !important;
 
   font-size: 2vw;
